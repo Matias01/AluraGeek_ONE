@@ -1,0 +1,12 @@
+.footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-footer);
+    margin: 2rem;
+}
+
+.footer p {
+    padding: 0.25rem;
+    margin: 0;
+}

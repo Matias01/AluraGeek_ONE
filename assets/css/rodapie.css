@@ -1,0 +1,242 @@
+.rodapie {
+    display: grid;
+    align-items: flex-start;
+    background: var(--cor-rodapie);
+    color: var(--cor-product-title);
+    font-weight: var(--font-titles);
+}
+
+.rodapie_image {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+    width: 180px;
+}
+
+.rodapie_links {
+    display: flex;
+}
+
+.rodapie_links ul {
+    font-weight: var(--font-subtitle);
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.rodapie_links ul li {
+    display: flex;
+    font-size: 16px;
+    padding: 2rem 0;
+    padding-top: 0;
+}
+
+.rodapie_contact {
+    box-sizing: border-box;
+}
+
+.rodapie_title, .rodapie_input, .rodapie_textarea {
+    display: block;
+    margin: 0;
+    margin-top: 0.75rem;
+    width: 80%;
+}
+
+.rodapie_title {
+    margin-top: 0;
+}
+
+.rodapie_input, .rodapie_textarea {
+    border: none;
+    border-bottom: 1px solid var(--cor-border);
+    border-radius: 3px;
+    padding: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.rodapie_textarea {
+    padding: 1.25rem 1rem;
+}
+
+.rodapie_input::placeholder, .rodapie_textarea::placeholder {
+    color: var(--cor-label);
+    font-size: 9px;
+    font-weight: var(--font-paragraph);
+    transform: translateY(-13px);
+    visibility: hidden;
+}
+
+.rodapie_input {
+    height: 30px;
+}
+
+.rodapie_textarea {
+    height: 65px;
+    resize: none;
+}
+
+.input-label, .input-label--textarea {
+    color: var(--cor-label);
+    font-size: 1rem;
+    font-weight: var(--font-paragraph);
+    position: relative;
+    left: 1rem;
+    transition: all 0.25s;
+}
+
+.input-label {
+    top: -2.75rem;
+}
+
+.input-label--textarea {
+    top: -6.25rem;
+}
+
+.rodapie_input:not(:placeholder-shown) + .input-label, 
+.rodapie_input:focus + .input-label, .rodapie_textarea:not(:placeholder-shown) + .input-label--textarea,
+.rodapie_textarea:focus + .input-label--textarea {
+    color: var(--cor-label);
+    font-size: 10px;
+    transition: all 0.25s;
+}
+
+.rodapie_textarea:not(:placeholder-shown) + .input-label--textarea,
+.rodapie_textarea:focus + .input-label--textarea {
+    top: -6.5rem;
+}
+
+.rodapie_input:not(:placeholder-shown) + .input-label, 
+.rodapie_input:focus + .input-label {
+    top: -3rem;
+}
+
+.rodapie_button {
+    align-self: flex-start;
+    background: var(--cor-button);
+    border: none;
+    box-sizing: border-box;
+    color: var(--cor-title-letter);
+    display: block;
+    font-weight: var(--font-paragraph);
+    font-size: 16px;
+    width: 150px;
+    height: 45px;
+}
+
+.rodapie_button:hover {
+    background: var(--cor-button-hover);
+}
+
+.input-message-error {
+    display: none;
+}
+
+.input-container--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.input-container--invalid .rodapie_input {
+    border: 1px solid red;
+    border-radius: 3px;
+}
+
+.input-container--invalid .input-label, .input-container--invalid .input-label--textarea {
+    color: red
+}
+  
+.input-container--invalid .input-message-error {
+    display: block;
+    color: red;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+@media screen and (min-width: 0) {
+    .rodapie {
+        grid-template-rows: 3;
+        grid-template-columns: 1;
+    }
+    .rodapie_image {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        justify-content: center;
+        width: 100%;
+    }
+    .rodapie_links {
+        align-items: center;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        justify-content: center;
+        width: 100%;
+    }
+    .rodapie_links ul li {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .rodapie_item {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .rodapie_contact {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding: 0.5rem 1rem;
+    }
+    .rodapie_title, .rodapie_input, .rodapie_textarea {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .rodapie {
+        grid-template-rows: 2;
+        grid-template-columns: 4;
+        padding: 40px 35px 0 1rem;
+    }
+    .rodapie_image {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .rodapie_links {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .rodapie_links ul li {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+    .rodapie_contact {
+        grid-row: 1/3;
+        grid-column: 2/5;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .rodapie {
+        grid-template-columns: 5;
+        padding-left: 3.75%;
+    }
+    .rodapie_image {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        justify-content: flex-start;
+    }
+    .rodapie_links {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    .rodapie_links ul li {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+    .rodapie_contact {
+        grid-row: 1/2;
+        grid-column: 3/6;
+    }
+}

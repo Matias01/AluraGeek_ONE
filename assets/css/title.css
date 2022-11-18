@@ -1,0 +1,59 @@
+.title {
+    background: url('../img/portada_hongo_mario.png') center / cover no-repeat;
+    font-weight: var(--font-titles);
+    min-height: 175px;
+    width: 100%;
+}
+
+.title_container {
+    color: var(--cor-title-letter);
+}
+
+.title_text, .title_subtext {
+    text-shadow: 2px 2px var(--cor-title-text);
+}
+
+.title_container a {
+    background: var(--cor-button);
+    font-weight: var(--font-paragraph);
+    padding: 12px 10px;
+}
+
+@media screen and (min-width: 0) {
+    .title {
+        height: 50vw;
+    }
+    .title_container {
+        padding: 2.5rem 0.5rem 0 1rem;
+    }
+    .title_text {
+        font-size: 6vw;
+        margin-top: 1.5rem;
+    }
+    .title_subtext {
+        font-size: 3vw;
+        margin-bottom: 2rem;
+    }
+    .title_container a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        height: 400px;
+    }
+    .title_container {
+        padding: 10% 10px 5% 3.75%;
+    }
+    .title_text {
+        font-size: 52px;
+    }
+    .title_subtext {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+    .title_container a {
+        font-size: 16px;
+    }
+}
