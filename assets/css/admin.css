@@ -1,66 +1,29 @@
 .admin {
     display: flex;
-    align-items: center;
+    justify-content: center;
     background: var(--cor-back-login);
     color: var(--cor-product-title);
-    min-height: 575px;
-    padding-bottom: 1rem;
+    min-height: 400px;
+    padding-top: 1rem;
 }
 
-.admin_form {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.admin_form div, .admin_form div select {
+.admin_form div{
     width: 100%;
 }
 
 .admin_title {
     display: flex;
     justify-content: flex-start;
+    padding-bottom: 4.5rem;
     width: 100%;
 }
 
-.admin_input, .admin_textarea {
-    border: none;
-    border-bottom: 1px solid var(--cor-border);
-    border-radius: 4px;
-    font-weight: var(--font-paragraph);
-    font-size: 12px;
-    height: 30px;
-    margin: 0.5rem 0;
-    padding: 0.5rem 0.75rem;
-    width: calc(100% - 1.5rem);
-}
-
-.admin_textarea {
-    font-size: 16px;
-    height: 65px;
-    resize: none;
-}
-
-.admin_input::placeholder, .admin_textarea::placeholder {
-    color: var(--cor-label);
-    font-size: 12px;
-    font-weight: var(--font-paragraph);
-    font-family: 'Raleway';
-}
-
-.admin_textarea::placeholder {
-    font-size: 16px;
-}
-
-.load_image {
-    background-color: #FFFFFF;
-}
-
 .admin_button {
+    display: flex;
     align-self: center;
     background: var(--cor-button);
     border: none;
+    border-radius: 2px;
     box-sizing: border-box;
     color: var(--cor-title-letter);
     display: block;

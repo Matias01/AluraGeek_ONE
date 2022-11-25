@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/title.css">
-    <link rel="stylesheet" href="assets/css/product.css">
     <link rel="stylesheet" href="assets/css/rodapie.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/formulario.css">
     <title>Tienda Alura</title>
 </head>
 <body>
@@ -39,36 +38,40 @@
             </header>
         </section>
 
-        <section class="title">
-            <div class="title_container">
-                <h1 class="title_text">Febrero Promocional</h1>
-                <h4 class="title_subtext">Productos seleccionados con 33% de descuento</h4>
-                <a href="#consolas">Ver Consolas</a>
+        <section class="formulario">
+            <div class="formulario_div">
+                <form class="formulario_form" action="" data-add-product>
+                    <h2 class="formulario_title">Agregar un nuevo producto</h2>
+                    <div>
+                        <input id="image1" class="formulario_input" type="url" placeholder="URL de imagen" required data-tipo="image1" data-product>
+                        <input id="image2" class="formulario_input load_image" type="file" accept="image/png, .jpng, .jpg" placeholder="imagen" required data-tipo="image2" data-product>
+                        <span class="input-message-error"></span>
+                    </div>
+                    <div>
+                        <select class="formulario_input" type="text" placeholder="Categoría" required data-tipo="category" data-product>
+                            <option class="" value="Seleccionar">Seleccionar</option>
+                            <option class="" value="Star Wars">Star Wars</option>
+                            <option class="" value="Consolas">Consolas</option>
+                            <option class="" value="Diversos">Diversos</option>
+                        </select>
+                        <span class="input-message-error"></span>
+                    </div>
+                    <div>
+                        <input class="formulario_input" type="text" placeholder="Nombre del producto" required maxlength="20" data-tipo="product" data-product>
+                        <span class="input-message-error"></span>
+                    </div>
+                    <div>
+                        <input class="formulario_input" type="number" step="0.01" placeholder="Precio del producto" required data-tipo="price" data-product>
+                        <span class="input-message-error"></span>
+                    </div>
+                    <div>
+                        <textarea class="formulario_textarea" rows="5" type="text" placeholder="Descripción del producto" maxlength="150" required data-tipo="description" data-product></textarea>
+                        <span class="input-message-error"></span>
+                    </div>
+                    <button class="formulario_button" type="submit">Agregar Producto</button>
+                </form>
             </div>
         </section>
-
-        <main class="product">
-            <div class="product_div">
-                <h1 class="product_title" datos-categoria-1>Star Wars</h1>
-                <a href="all-products.html">Ver Todo<i class="fa fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="product_list" datos-productos-1></div>
-
-            <div class="product_div">
-                <h1 id="consolas" class="product_title" datos-categoria-2>Consolas</h1>
-                <a href="all-products.html">Ver Todo<i class="fa fa-arrow-right"></i></a>
-            </div>
-
-            <div class="product_list" datos-productos-2></div>
-
-            <div class="product_div">
-                <h1 class="product_title" datos-categoria-3>Diversos</h1>
-                <a href="all-products.html">Ver Todo<i class="fa fa-arrow-right"></i></a>
-            </div>
-
-            <div class="product_list" datos-productos-3></div>
-        </main>
 
         <section class="rodapie">
             <div class="rodapie_image">
@@ -107,8 +110,8 @@
             <p>2022</p>
         </section>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="scripts.js"></script>
-    <script type="module" src="controllers/products-controller.js"></script>
+    <script type="module" src="controllers/add-product-controller.js"></script>
 </body>
 </html>

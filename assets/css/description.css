@@ -11,7 +11,6 @@
 
 .description_div img {
     border-radius: 4px;
-    width: 170%;
     height: fit-content;
     max-height: 400px;
 }
@@ -56,15 +55,23 @@
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 450px) {
     .description {
         padding: 0.75rem 3.75% 0.25rem 3.75%;
     }
     .description_div {
         flex-direction: row;
+        flex-wrap: nowrap;
     }
     .description_div img {
-        width: 170%;
+        width: 45vw;
+        min-height: 200px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .description_div img {
+        width: 45vw;
         min-height: 300px;
     }
     .description_title {

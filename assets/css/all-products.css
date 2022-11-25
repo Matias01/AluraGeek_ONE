@@ -22,16 +22,28 @@
 }
 
 .product_icon {
+    display: flex;
     position: absolute;
+    width: 65px;
 }
 
-.product_icon--edit, .product_icon--trash {
+.product_icon--edit, .product_icon--trash  {
     align-items: center;
-    background: var(--cor-menu-back);
-    border-radius: 50%;
+    border: none;
     justify-content: center;
     padding: 7px;
-    width: 15px;
+}
+
+.product_icon a, .product_icon--edit, .product_icon--trash {
+    background: var(--cor-menu-back);
+    border-radius: 50%;
+    margin-left: 1px;
+    margin-top: 1px;
+    width: 29px;
+}
+
+.product_icon--edit {
+    margin: 0;
 }
 
 .product_icon--edit:hover, .product_icon--trash:hover {

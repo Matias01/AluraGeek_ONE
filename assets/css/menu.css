@@ -31,10 +31,18 @@
     flex-direction: row;
     gap: 8px;
     justify-content: space-between;
-    margin-right: 5vw;
-    margin-left: 2vw;
-    padding: 8px 10px;
     width: 40%;
+}
+
+.menu_input {
+    align-items: baseline;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 8px 10px;
+    width: 100%;
 }
 
 .menu_search input {
@@ -43,6 +51,10 @@
 
 .menu_search, .menu_search input {
     border: none;
+}
+
+.menu_login {
+    min-width: fit-content;
 }
 
 .menu_login a {
@@ -71,7 +83,7 @@
     }
     .menu_login a {
         margin-right: 5px;
-        padding: 12px 10vw;
+        padding: 11px 10vw;
     }
 }
 
@@ -84,7 +96,7 @@
     }
     .menu_login a {
         margin-right: 25px;
-        padding: 12px 50px;
+        padding: 11px 50px;
     }
 }
 
